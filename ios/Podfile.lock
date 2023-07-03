@@ -306,6 +306,7 @@ PODS:
     - react-native-config/App (= 1.5.1)
   - react-native-config/App (1.5.1):
     - React-Core
+  - react-native-config/Extension (1.5.1)
   - React-perflogger (0.70.10)
   - React-RCTActionSheet (0.70.10):
     - React-Core/RCTActionSheetHeaders (= 0.70.10)
@@ -425,6 +426,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-config (from `../node_modules/react-native-config`)
+  - react-native-config/Extension (from `../node_modules/react-native-config`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -581,6 +583,6 @@ SPEC CHECKSUMS:
   Yoga: 0518155cfbcc68c56223422f6a20a71b82e307d2
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: cf820b1631107b2f82aa9039da2225517c5bf857
+PODFILE CHECKSUM: e9c25bba5bb0ab9045dc95d2179e1cf83b0ad701
 
 COCOAPODS: 1.11.3

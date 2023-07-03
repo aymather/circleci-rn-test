@@ -7,59 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* circleciRnTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* circleciRnTestTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-circleciRnTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-circleciRnTest.a */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
-		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-circleciRnTest-circleciRnTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-circleciRnTest-circleciRnTestTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		1C3C81F7AE364DECC0C506BC /* libPods-circleciRnTestCommonPods-circleciRnTest_prod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A9BFE72171423663B22D3D /* libPods-circleciRnTestCommonPods-circleciRnTest_prod.a */; };
+		6AC424F42A53555F00CD2FAF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		6AC424F52A53555F00CD2FAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6AC424F92A53555F00CD2FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		6AC424FA2A53555F00CD2FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		6AC425072A53556200CD2FAF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		6AC425082A53556200CD2FAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6AC4250C2A53556200CD2FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		6AC4250D2A53556200CD2FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		6AC4251A2A53556400CD2FAF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		6AC4251B2A53556400CD2FAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6AC4251F2A53556400CD2FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		6AC425202A53556400CD2FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		AA7AD6EA731890FC11869709 /* libPods-circleciRnTestCommonPods-circleciRnTest_staging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA9383BA4B809278B938928 /* libPods-circleciRnTestCommonPods-circleciRnTest_staging.a */; };
+		D71648783F450240BAEE31A2 /* libPods-circleciRnTestCommonPods-circleciRnTest_dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D447E04732C84040249C14BE /* libPods-circleciRnTestCommonPods-circleciRnTest_dev.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = circleciRnTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* circleciRnTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = circleciRnTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* circleciRnTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = circleciRnTestTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* circleciRnTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circleciRnTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = circleciRnTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = circleciRnTest/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = circleciRnTest/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = circleciRnTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = circleciRnTest/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-circleciRnTest-circleciRnTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circleciRnTest-circleciRnTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33239C100746478A6CC50C0C /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_staging.release.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging.release.xcconfig"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-circleciRnTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTest.debug.xcconfig"; path = "Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest.debug.xcconfig"; sourceTree = "<group>"; };
+		432B236CFEFF9BF5DB8EB59E /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_dev.release.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev.release.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-circleciRnTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTest.release.xcconfig"; path = "Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest.release.xcconfig"; sourceTree = "<group>"; };
+		595A5EF628206F190CEDCCD4 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_prod.release.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-circleciRnTest-circleciRnTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTest-circleciRnTestTests.debug.xcconfig"; path = "Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-circleciRnTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circleciRnTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D8D90FE0065FD3B7A00C570 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_prod.debug.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod.debug.xcconfig"; sourceTree = "<group>"; };
+		5FA9383BA4B809278B938928 /* libPods-circleciRnTestCommonPods-circleciRnTest_staging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circleciRnTestCommonPods-circleciRnTest_staging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC425012A53555F00CD2FAF /* circleciRnTest_dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circleciRnTest_dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC425022A53555F00CD2FAF /* circleciRnTest-dev Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "circleciRnTest-dev Info.plist"; path = "/Users/alecmather/Desktop/Projects/circleci-rn-test/ios/circleciRnTest-dev Info.plist"; sourceTree = "<absolute>"; };
+		6AC425142A53556200CD2FAF /* circleciRnTest_staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circleciRnTest_staging.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC425152A53556200CD2FAF /* circleciRnTest-staging Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "circleciRnTest-staging Info.plist"; path = "/Users/alecmather/Desktop/Projects/circleci-rn-test/ios/circleciRnTest-staging Info.plist"; sourceTree = "<absolute>"; };
+		6AC425272A53556400CD2FAF /* circleciRnTest_prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circleciRnTest_prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC425282A53556400CD2FAF /* circleciRnTest-prod Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "circleciRnTest-prod Info.plist"; path = "/Users/alecmather/Desktop/Projects/circleci-rn-test/ios/circleciRnTest-prod Info.plist"; sourceTree = "<absolute>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = circleciRnTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-circleciRnTest-circleciRnTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTest-circleciRnTestTests.release.xcconfig"; path = "Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		B216A515F36ED058E771FC70 /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_staging.debug.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging.debug.xcconfig"; sourceTree = "<group>"; };
+		D447E04732C84040249C14BE /* libPods-circleciRnTestCommonPods-circleciRnTest_dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circleciRnTestCommonPods-circleciRnTest_dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A9BFE72171423663B22D3D /* libPods-circleciRnTestCommonPods-circleciRnTest_prod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circleciRnTestCommonPods-circleciRnTest_prod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FAD8FBED720496D653D47253 /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circleciRnTestCommonPods-circleciRnTest_dev.debug.xcconfig"; path = "Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
+		6AC424F62A53555F00CD2FAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-circleciRnTest-circleciRnTestTests.a in Frameworks */,
+				D71648783F450240BAEE31A2 /* libPods-circleciRnTestCommonPods-circleciRnTest_dev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+		6AC425092A53556200CD2FAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-circleciRnTest.a in Frameworks */,
+				AA7AD6EA731890FC11869709 /* libPods-circleciRnTestCommonPods-circleciRnTest_staging.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC4251C2A53556400CD2FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C3C81F7AE364DECC0C506BC /* libPods-circleciRnTestCommonPods-circleciRnTest_prod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +106,6 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -100,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-circleciRnTest.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-circleciRnTest-circleciRnTestTests.a */,
+				D447E04732C84040249C14BE /* libPods-circleciRnTestCommonPods-circleciRnTest_dev.a */,
+				E0A9BFE72171423663B22D3D /* libPods-circleciRnTestCommonPods-circleciRnTest_prod.a */,
+				5FA9383BA4B809278B938928 /* libPods-circleciRnTestCommonPods-circleciRnTest_staging.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +140,9 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6AC425022A53555F00CD2FAF /* circleciRnTest-dev Info.plist */,
+				6AC425152A53556200CD2FAF /* circleciRnTest-staging Info.plist */,
+				6AC425282A53556400CD2FAF /* circleciRnTest-prod Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -131,8 +152,9 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* circleciRnTest.app */,
-				00E356EE1AD99517003FC87E /* circleciRnTestTests.xctest */,
+				6AC425012A53555F00CD2FAF /* circleciRnTest_dev.app */,
+				6AC425142A53556200CD2FAF /* circleciRnTest_staging.app */,
+				6AC425272A53556400CD2FAF /* circleciRnTest_prod.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +166,12 @@
 				5709B34CF0A7D63546082F79 /* Pods-circleciRnTest.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-circleciRnTest-circleciRnTestTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-circleciRnTest-circleciRnTestTests.release.xcconfig */,
+				FAD8FBED720496D653D47253 /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.debug.xcconfig */,
+				432B236CFEFF9BF5DB8EB59E /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.release.xcconfig */,
+				5D8D90FE0065FD3B7A00C570 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.debug.xcconfig */,
+				595A5EF628206F190CEDCCD4 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.release.xcconfig */,
+				B216A515F36ED058E771FC70 /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.debug.xcconfig */,
+				33239C100746478A6CC50C0C /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -151,47 +179,70 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* circleciRnTestTests */ = {
+		6AC424F02A53555F00CD2FAF /* circleciRnTest_dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "circleciRnTestTests" */;
+			buildConfigurationList = 6AC424FE2A53555F00CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_dev" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = circleciRnTestTests;
-			productName = circleciRnTestTests;
-			productReference = 00E356EE1AD99517003FC87E /* circleciRnTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		13B07F861A680F5B00A75B9A /* circleciRnTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "circleciRnTest" */;
-			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
-				FD10A7F022414F080027D42C /* Start Packager */,
-				13B07F871A680F5B00A75B9A /* Sources */,
-				13B07F8C1A680F5B00A75B9A /* Frameworks */,
-				13B07F8E1A680F5B00A75B9A /* Resources */,
-				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				6AC424F12A53555F00CD2FAF /* [CP] Check Pods Manifest.lock */,
+				6AC424F22A53555F00CD2FAF /* Start Packager */,
+				6AC424F32A53555F00CD2FAF /* Sources */,
+				6AC424F62A53555F00CD2FAF /* Frameworks */,
+				6AC424F82A53555F00CD2FAF /* Resources */,
+				6AC424FB2A53555F00CD2FAF /* Bundle React Native code and images */,
+				6AC424FC2A53555F00CD2FAF /* [CP] Embed Pods Frameworks */,
+				6AC424FD2A53555F00CD2FAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = circleciRnTest;
+			name = circleciRnTest_dev;
 			productName = circleciRnTest;
-			productReference = 13B07F961A680F5B00A75B9A /* circleciRnTest.app */;
+			productReference = 6AC425012A53555F00CD2FAF /* circleciRnTest_dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AC425032A53556200CD2FAF /* circleciRnTest_staging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC425112A53556200CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_staging" */;
+			buildPhases = (
+				6AC425042A53556200CD2FAF /* [CP] Check Pods Manifest.lock */,
+				6AC425052A53556200CD2FAF /* Start Packager */,
+				6AC425062A53556200CD2FAF /* Sources */,
+				6AC425092A53556200CD2FAF /* Frameworks */,
+				6AC4250B2A53556200CD2FAF /* Resources */,
+				6AC4250E2A53556200CD2FAF /* Bundle React Native code and images */,
+				6AC4250F2A53556200CD2FAF /* [CP] Embed Pods Frameworks */,
+				6AC425102A53556200CD2FAF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = circleciRnTest_staging;
+			productName = circleciRnTest;
+			productReference = 6AC425142A53556200CD2FAF /* circleciRnTest_staging.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AC425162A53556400CD2FAF /* circleciRnTest_prod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC425242A53556400CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_prod" */;
+			buildPhases = (
+				6AC425172A53556400CD2FAF /* [CP] Check Pods Manifest.lock */,
+				6AC425182A53556400CD2FAF /* Start Packager */,
+				6AC425192A53556400CD2FAF /* Sources */,
+				6AC4251C2A53556400CD2FAF /* Frameworks */,
+				6AC4251E2A53556400CD2FAF /* Resources */,
+				6AC425212A53556400CD2FAF /* Bundle React Native code and images */,
+				6AC425222A53556400CD2FAF /* [CP] Embed Pods Frameworks */,
+				6AC425232A53556400CD2FAF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = circleciRnTest_prod;
+			productName = circleciRnTest;
+			productReference = 6AC425272A53556400CD2FAF /* circleciRnTest_prod.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -201,15 +252,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
-				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
-					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
-					};
-				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "circleciRnTest" */;
 			compatibilityVersion = "Xcode 12.0";
@@ -224,66 +266,45 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* circleciRnTest */,
-				00E356ED1AD99517003FC87E /* circleciRnTestTests */,
+				6AC424F02A53555F00CD2FAF /* circleciRnTest_dev */,
+				6AC425032A53556200CD2FAF /* circleciRnTest_staging */,
+				6AC425162A53556400CD2FAF /* circleciRnTest_prod */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
+		6AC424F82A53555F00CD2FAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC424F92A53555F00CD2FAF /* LaunchScreen.storyboard in Resources */,
+				6AC424FA2A53555F00CD2FAF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+		6AC4250B2A53556200CD2FAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6AC4250C2A53556200CD2FAF /* LaunchScreen.storyboard in Resources */,
+				6AC4250D2A53556200CD2FAF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC4251E2A53556400CD2FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC4251F2A53556400CD2FAF /* LaunchScreen.storyboard in Resources */,
+				6AC425202A53556400CD2FAF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/.xcode.env.local",
-				"$(SRCROOT)/.xcode.env",
-			);
-			name = "Bundle React Native code and images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
-		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		6AC424F12A53555F00CD2FAF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,87 +319,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-circleciRnTest-circleciRnTestTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-circleciRnTestCommonPods-circleciRnTest_dev-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-circleciRnTest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest/Pods-circleciRnTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTest-circleciRnTestTests/Pods-circleciRnTest-circleciRnTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD10A7F022414F080027D42C /* Start Packager */ = {
+		6AC424F22A53555F00CD2FAF /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,97 +345,283 @@
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		6AC424FB2A53555F00CD2FAF /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		6AC424FC2A53555F00CD2FAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC424FD2A53555F00CD2FAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_dev/Pods-circleciRnTestCommonPods-circleciRnTest_dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425042A53556200CD2FAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-circleciRnTestCommonPods-circleciRnTest_staging-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425052A53556200CD2FAF /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC4250E2A53556200CD2FAF /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		6AC4250F2A53556200CD2FAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425102A53556200CD2FAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_staging/Pods-circleciRnTestCommonPods-circleciRnTest_staging-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425172A53556400CD2FAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-circleciRnTestCommonPods-circleciRnTest_prod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425182A53556400CD2FAF /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425212A53556400CD2FAF /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		6AC425222A53556400CD2FAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC425232A53556400CD2FAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-circleciRnTestCommonPods-circleciRnTest_prod/Pods-circleciRnTestCommonPods-circleciRnTest_prod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
+		6AC424F32A53555F00CD2FAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* circleciRnTestTests.m in Sources */,
+				6AC424F42A53555F00CD2FAF /* AppDelegate.mm in Sources */,
+				6AC424F52A53555F00CD2FAF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13B07F871A680F5B00A75B9A /* Sources */ = {
+		6AC425062A53556200CD2FAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				6AC425072A53556200CD2FAF /* AppDelegate.mm in Sources */,
+				6AC425082A53556200CD2FAF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC425192A53556400CD2FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC4251A2A53556400CD2FAF /* AppDelegate.mm in Sources */,
+				6AC4251B2A53556400CD2FAF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* circleciRnTest */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
+		6AC424FF2A53555F00CD2FAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-circleciRnTest-circleciRnTestTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = circleciRnTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circleciRnTest.app/circleciRnTest";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-circleciRnTest-circleciRnTestTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = circleciRnTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circleciRnTest.app/circleciRnTest";
-			};
-			name = Release;
-		};
-		13B07F941A680F5B00A75B9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-circleciRnTest.debug.xcconfig */;
+			baseConfigurationReference = FAD8FBED720496D653D47253 /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = circleciRnTest/Info.plist;
+				INFOPLIST_FILE = "circleciRnTest copy-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,22 +631,26 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = circleciRnTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		13B07F951A680F5B00A75B9A /* Release */ = {
+		6AC425002A53555F00CD2FAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-circleciRnTest.release.xcconfig */;
+			baseConfigurationReference = 432B236CFEFF9BF5DB8EB59E /* Pods-circleciRnTestCommonPods-circleciRnTest_dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = circleciRnTest/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "circleciRnTest copy-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,8 +660,125 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = circleciRnTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		6AC425122A53556200CD2FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B216A515F36ED058E771FC70 /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "circleciRnTest copy 2-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		6AC425132A53556200CD2FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33239C100746478A6CC50C0C /* Pods-circleciRnTestCommonPods-circleciRnTest_staging.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "circleciRnTest copy 2-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		6AC425252A53556400CD2FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8D90FE0065FD3B7A00C570 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "circleciRnTest copy 3-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		6AC425262A53556400CD2FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 595A5EF628206F190CEDCCD4 /* Pods-circleciRnTestCommonPods-circleciRnTest_prod.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "circleciRnTest copy 3-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.circleci-rn-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -669,20 +924,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "circleciRnTestTests" */ = {
+		6AC424FE2A53555F00CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
+				6AC424FF2A53555F00CD2FAF /* Debug */,
+				6AC425002A53555F00CD2FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "circleciRnTest" */ = {
+		6AC425112A53556200CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_staging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13B07F941A680F5B00A75B9A /* Debug */,
-				13B07F951A680F5B00A75B9A /* Release */,
+				6AC425122A53556200CD2FAF /* Debug */,
+				6AC425132A53556200CD2FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC425242A53556400CD2FAF /* Build configuration list for PBXNativeTarget "circleciRnTest_prod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC425252A53556400CD2FAF /* Debug */,
+				6AC425262A53556400CD2FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

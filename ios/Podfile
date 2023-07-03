@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'circleciRnTest' do
+abstract_target 'circleciRnTestCommonPods' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -26,9 +26,19 @@ target 'circleciRnTest' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'circleciRnTestTests' do
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+  pod 'react-native-config/Extension', :path => '../node_modules/react-native-config'
+
+  target 'circleciRnTest_dev' do
     inherit! :complete
-    # Pods for testing
+  end
+
+  target 'circleciRnTest_staging' do
+    inherit! :complete
+  end
+
+  target 'circleciRnTest_prod' do
+    inherit! :complete
   end
 
   post_install do |installer|
