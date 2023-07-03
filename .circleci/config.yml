@@ -23,6 +23,8 @@ jobs:
           name: Copy Environment Variables
           command: |
             echo API_URL=$API_URL >> .env
+            echo API_URL=$API_URL >> .env
+            ls -a
       - run:
           name: Run Tests
           command: yarn test
