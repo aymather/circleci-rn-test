@@ -6,10 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Copy Environment Variables
-          command: |
-            echo API_URL=$API_URL >> .env
-      - run:
           name: Install Dependencies
           command: yarn install
       - run:
