@@ -1,4 +1,4 @@
-package com.circlecirntest.newarchitecture.modules;
+package com.example.circleci-rn-test.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

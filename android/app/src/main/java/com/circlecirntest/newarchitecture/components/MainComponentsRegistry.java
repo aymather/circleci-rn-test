@@ -1,4 +1,4 @@
-package com.circlecirntest.newarchitecture.components;
+package com.example.circleci-rn-test.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
