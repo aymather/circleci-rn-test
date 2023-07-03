@@ -1,11 +1,15 @@
 version: 2.1
 orbs:
-  macos: circleci/macos@2
+  macos: circleci/macos@2.0
 jobs:
   test:
     steps:
+      macos:
+        xcode: 11.7
       - macos/switch-ruby:
           version: "2.7.5"
+      - run: echo 'chruby ruby-2.7.5' >> ~/.bash_profile
+      - macos/add-uitest-permissions
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
