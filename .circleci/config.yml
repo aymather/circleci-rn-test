@@ -4,6 +4,13 @@ jobs:
     docker:
       - image: cimg/ruby:2.7.5-node
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "2f:09:c3:1f:a4:c7:b3:ea:ee:cc:59:d1:07:8d:39:5d"
+      - run:
+          name: Set Git to use SSH
+          command: |
+            git config --global url."ssh://git@github.com".insteadOf "https://github.com"
       - checkout
       - run:
           name: Install Dependencies
