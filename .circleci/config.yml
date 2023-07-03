@@ -1,9 +1,11 @@
 version: 2.1
+orbs:
+  macos: circleci/macos@2
 jobs:
   test:
-    docker:
-      - image: cimg/ruby:2.7.5-node
     steps:
+      - macos/switch-ruby:
+          version: "2.7.5"
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
