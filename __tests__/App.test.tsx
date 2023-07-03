@@ -7,7 +7,7 @@ describe('App', () => {
 	it('renders correctly', () => {
 
 		const rendered = render(<App />)
-		expect(rendered.getByText('Hi')).toBeDefined()
+		expect(rendered.getByText('Hello World')).toBeDefined()
 
 	})
 
