@@ -9,6 +9,8 @@ describe('App', () => {
 		const rendered = render(<App />)
 		expect(rendered.getByText('Hello World')).toBeDefined()
 		expect(rendered.getByText('Test Button')).toBeDefined()
+		expect(rendered.getByText('dev')).toBeDefined()
+		expect(rendered.getByText('http://localhost:3000')).toBeDefined()
 
 	})
 
