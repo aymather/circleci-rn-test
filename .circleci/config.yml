@@ -6,10 +6,6 @@ jobs:
     macos:
         xcode: 14.3.1
     steps:
-      - macos/switch-ruby:
-          version: "2.7.5"
-      - run: echo 'chruby ruby-2.7.5' >> ~/.bash_profile
-      - macos/add-uitest-permissions
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
@@ -18,6 +14,17 @@ jobs:
           command: |
             git config --global url."ssh://git@github.com".insteadOf "https://github.com"
       - checkout
+      - run:
+          name: Install chruby and ruby-install
+          command: |
+            brew install chruby ruby-install
+            echo 'source /usr/local/opt/chruby/share/chruby/chruby.sh' >> ~/.bash_profile
+            echo 'source /usr/local/opt/chruby/share/chruby/auto.sh' >> ~/.bash_profile
+      - run:
+          name: Install Ruby
+          command: |
+            ruby-install ruby 2.7.5
+            chruby 2.7.5
       - run:
           name: Install Dependencies
           command: yarn install
