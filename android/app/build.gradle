@@ -144,7 +144,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.circleci-rn-test"
+        applicationId "com.example.circlecirntest"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -245,21 +245,21 @@ android {
     productFlavors {
         prod {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circleci-rn-test"
+            applicationId "com.example.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circleci-rn-test"
+            resValue "string", "build_config_package", "com.example.circlecirntest"
         }
         staging {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circleci-rn-test"
+            applicationId "com.example.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circleci-rn-test"
+            resValue "string", "build_config_package", "com.example.circlecirntest"
         }
         dev {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circleci-rn-test"
+            applicationId "com.example.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circleci-rn-test"
+            resValue "string", "build_config_package", "com.example.circlecirntest"
         }
     }
 

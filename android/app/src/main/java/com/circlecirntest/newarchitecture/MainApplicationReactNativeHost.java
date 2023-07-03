@@ -1,4 +1,4 @@
-package com.example.circleci-rn-test.newarchitecture;
+package com.example.circlecirntest.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.example.circleci-rn-test.BuildConfig;
-import com.example.circleci-rn-test.newarchitecture.components.MainComponentsRegistry;
-import com.example.circleci-rn-test.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.example.circlecirntest.BuildConfig;
+import com.example.circlecirntest.newarchitecture.components.MainComponentsRegistry;
+import com.example.circlecirntest.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

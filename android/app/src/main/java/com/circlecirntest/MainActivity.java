@@ -1,4 +1,4 @@
-package com.example.circleci-rn-test;
+package com.example.circlecirntest;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
