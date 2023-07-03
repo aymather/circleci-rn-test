@@ -11,6 +11,7 @@ describe('App', () => {
 		expect(rendered.getByText('Test Button')).toBeDefined()
 		expect(rendered.getByText('dev')).toBeDefined()
 		expect(rendered.getByText('http://localhost:3000')).toBeDefined()
+		expect(rendered.getByText(/localhost/i)).toBeDefined()
 
 	})
 
