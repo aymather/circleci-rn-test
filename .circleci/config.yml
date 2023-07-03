@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/node:18.16.0
+      - image: cimg/ruby:3.2.2-node
     steps:
       - checkout
       - run:
@@ -11,6 +11,9 @@ jobs:
       - run:
           name: Run Tests
           command: yarn test
+      - run:
+          name: Install Fastlane
+          command: bundle install
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane ios internal_beta
