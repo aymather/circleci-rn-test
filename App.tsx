@@ -13,12 +13,12 @@ import {
 const App = () => {
 
 	return (
-		<SafeAreaView>
+		<SafeAreaView style={styles.container}>
 			<View style={styles.container}>
 				<TestComponent name='Hello World' />
 				<TestButton onPress={() => console.log('Button Pressed')} />
-				<Text>{Config.ENV}</Text>
-				<Text>{Config.API_URL}</Text>
+				<Text style={styles.text}>{Config.ENV}</Text>
+				<Text style={styles.text}>{Config.API_URL}</Text>
 			</View>
 		</SafeAreaView>
 	)
@@ -26,7 +26,14 @@ const App = () => {
 
 const styles = StyleSheet.create({
 	container: {
-		
+		backgroundColor: '#fff',
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	text: {
+		fontSize: 20,
+		color: '#333'
 	}
 })
 
