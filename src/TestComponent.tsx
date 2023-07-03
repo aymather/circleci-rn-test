@@ -14,7 +14,7 @@ const TestComponent: React.FC<TestComponentProps> = ({ name }) => {
 
     return (
         <View style={styles.container}>
-            <Text></Text>
+            <Text>{name}</Text>
         </View>
     )
 }
