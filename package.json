@@ -1,5 +1,5 @@
 {
-  "name": "circleciRnTest",
+  "name": "circle",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.22.5",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "@tsconfig/react-native": "^2.0.2",
