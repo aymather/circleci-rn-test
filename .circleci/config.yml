@@ -6,7 +6,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "2f:09:c3:1f:a4:c7:b3:ea:ee:cc:59:d1:07:8d:39:5d"
+            - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
       - run:
           name: Set Git to use SSH
           command: |
