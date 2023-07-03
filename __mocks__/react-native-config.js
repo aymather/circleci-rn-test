@@ -1,3 +1,4 @@
 module.exports = {
-    ENV: 'dev'
+    ENV: 'dev',
+    API_URL: 'http://localhost:3000'
 };
