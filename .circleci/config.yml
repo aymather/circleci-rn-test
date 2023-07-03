@@ -20,6 +20,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
+          name: Copy Environment Variables
+          command: |
+            echo API_URL=$API_URL >> .env
+      - run:
           name: Run Tests
           command: yarn test
 workflows:
