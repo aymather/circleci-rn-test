@@ -58,7 +58,7 @@ commands:
 
 jobs:
   test:
-    executor: rn/linux_js
+    executor: rn/macos
     steps:
       - checkout
       - rn/yarn_install
