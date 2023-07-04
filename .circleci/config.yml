@@ -95,3 +95,6 @@ jobs:
           root: .
 
 workflows:
+  test:
+    jobs:
+      - test
