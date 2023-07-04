@@ -27,6 +27,11 @@ jobs:
             pod install
           working_directory: ./ios
       - run:
+          name: Install Apple WWDR Certificate
+          command: |
+            curl https://developer.apple.com/certificationauthority/AppleWWDRCA.cer --output AppleWWDRCA.cer
+            security import AppleWWDRCA.cer -k ~/Library/Keychains/login.keychain-db
+      - run:
           name: Install Fastlane
           command: bundle install
           working_directory: fastlane
