@@ -14,8 +14,6 @@ jobs:
           command: |
             git config --global url."ssh://git@github.com".insteadOf "https://github.com"
       - checkout
-      - macos/switch-ruby:
-          version: 2.7.5
       - run:
           name: Install Dependencies
           command: yarn install
