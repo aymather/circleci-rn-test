@@ -14,21 +14,8 @@ jobs:
           command: |
             git config --global url."ssh://git@github.com".insteadOf "https://github.com"
       - checkout
-      - run:
-          name: Install chruby and ruby-install
-          command: |
-            brew install chruby ruby-install
-            echo 'source /usr/local/opt/chruby/share/chruby/chruby.sh' >> ~/.bash_profile
-            echo 'source /usr/local/opt/chruby/share/chruby/auto.sh' >> ~/.bash_profile
-      - run:
-          name: Install Ruby 2.7.5
-          command: |
-            brew install rbenv
-            rbenv init
-            rbenv install 2.7.5
-            rbenv global 2.7.5
-            echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-            source ~/.bash_profile
+      - switch-ruby:
+          version: 2.7.5
       - run:
           name: Install Dependencies
           command: yarn install
