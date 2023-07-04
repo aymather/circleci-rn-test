@@ -58,10 +58,11 @@ commands:
 
 jobs:
   test:
-    executor: rn/macos
+    executor: rn/linux_js
     steps:
       - checkout
       - rn/yarn_install
+      - rn/pod_install
 
 workflows:
   test:
