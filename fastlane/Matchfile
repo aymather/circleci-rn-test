@@ -1,4 +1,4 @@
-git_url("https://github.com/celium-music/xcode-certs")
+git_url("git@github.com:celium-music/xcode-certs.git")
 
 storage_mode("git")
 

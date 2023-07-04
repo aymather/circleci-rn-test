@@ -2,10 +2,6 @@ require 'dotenv/load'
 
 platform :ios do
 
-    before_all do
-        setup_circle_ci
-    end
-
     lane :dev do
 
         # Set up match for development
@@ -27,11 +23,10 @@ platform :ios do
 
     lane :internal_beta do
 
+        setup_circle_ci
+
         # Make sure match is set up correctly for the testflight deployment
-        match(
-            type: 'appstore',
-            readonly: true
-        )
+        match(type: 'appstore')
 
         # Build
         gym(
