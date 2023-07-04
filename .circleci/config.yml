@@ -85,7 +85,7 @@ commands:
 
 jobs:
   test:
-    executor: rn/macos
+    executor: rn/linux_js
       xcode_version: "14.3.1"
     steps:
       - checkout
