@@ -23,6 +23,10 @@ platform :ios do
 
     lane :internal_beta do
 
+        before_all do
+            setup_circle_ci
+        end
+
         # Make sure match is set up correctly for the testflight deployment
         match(
             type: 'appstore',
@@ -38,17 +42,17 @@ platform :ios do
             output_name: 'circleciRnTest-staging.ipa'
         )
 
-        # Upload to TestFlight
-        pilot(
-            skip_submission: true,
-            skip_waiting_for_build_processing: true,
-            username: 'aymather@gmail.com',
-            app_identifier: 'com.example.circlecirntest',
-            distribute_external: true,
-            changelog: 'v#{get_version_number}(#{get_build_number})',
-            beta_app_feedback_email: 'aymather@gmail.com',
-            beta_app_description: 'v#{get_version_number}(#{get_build_number})'
-        )
+        # # Upload to TestFlight
+        # pilot(
+        #     skip_submission: true,
+        #     skip_waiting_for_build_processing: true,
+        #     username: 'aymather@gmail.com',
+        #     app_identifier: 'com.example.circlecirntest',
+        #     distribute_external: true,
+        #     changelog: 'v#{get_version_number}(#{get_build_number})',
+        #     beta_app_feedback_email: 'aymather@gmail.com',
+        #     beta_app_description: 'v#{get_version_number}(#{get_build_number})'
+        # )
 
     end
 
