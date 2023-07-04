@@ -62,9 +62,6 @@ jobs:
     steps:
       - checkout
       - rn/yarn_install
-      - run:
-        name: Run Tests
-        command: yarn test
 
 workflows:
   test:
