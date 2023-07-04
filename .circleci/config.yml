@@ -62,8 +62,6 @@ commands:
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
       - run: yarn install
-      # Uncomment the following line if you need to patch your packages
-      # - run: yarn patch-package
       - save_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
           paths:
