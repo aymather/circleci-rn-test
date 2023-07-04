@@ -65,6 +65,9 @@ jobs:
       - checkout
       - rn/yarn_install
       - rn/pod_install
+      - run:
+          name: Run Jest Tests
+          command: yarn test
 
 workflows:
   test:
