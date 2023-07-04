@@ -30,7 +30,11 @@ jobs:
           name: Install Apple WWDR Certificate
           command: |
             curl https://developer.apple.com/certificationauthority/AppleWWDRCA.cer --output AppleWWDRCA.cer
-            security import AppleWWDRCA.cer -k ~/Library/Keychains/login.keychain-db
+            security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" /Library/Keychains/System.keychain || true
+            security import AppleWWDRCA.cer -k /Library/Keychains/System.keychain
+      - run:
+          name: Unlock System keychain
+          command: security unlock-keychain -p circle /Library/Keychains/System.keychain
       - run:
           name: Install Fastlane
           command: bundle install
