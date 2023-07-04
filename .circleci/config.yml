@@ -21,6 +21,12 @@ jobs:
           name: Run Tests
           command: yarn test
       - run:
+          name: Install CocoaPods
+          command: |
+            sudo gem install cocoapods
+            pod install
+          working_directory: ./ios
+      - run:
           name: Install Fastlane
           command: bundle install
           working_directory: fastlane
