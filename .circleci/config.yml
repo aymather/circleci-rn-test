@@ -59,6 +59,7 @@ commands:
 jobs:
   test:
     executor: rn/macos
+      xcode_version: 14.3.1
     steps:
       - checkout
       - rn/yarn_install
