@@ -68,6 +68,14 @@ jobs:
       - run:
           name: Run Jest Tests
           command: yarn test
+      - run:
+          name: Install fastlane
+          command: bundle install
+          working_directory: fastlane
+      - run:
+          name: Deploy with fastlane
+          command: bundle exec fastlane ios internal_beta
+          working_directory: fastlane
 
 workflows:
   test:
