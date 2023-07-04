@@ -85,14 +85,23 @@ commands:
 
 jobs:
   test:
-    executor: rn/linux_js
+    executor: rn/macos
+      - xcode: "14.3.1"
     steps:
       - checkout
       - rn/yarn_install
-      - run: yarn test
-      - persist_to_workspace:
-          paths: .
-          root: .
+      - rn/pod_install
+      - run:
+        name: Run Tests
+        command: yarn test
+      - run:
+        name: Install Fastlane
+        working_directory: fastlane
+        command: bundle install
+      - run:
+        name: Deploy with fastlane
+        working_directory: fastlane
+        command: bundle exec fastlane ios internal_beta
 
 workflows:
   test:
