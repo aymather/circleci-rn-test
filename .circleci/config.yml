@@ -53,7 +53,7 @@
 version: 2.1
 orbs:
   rn: react-native-community/react-native@7.1.1
-  
+
 commands:
   install_packages:
     steps:
@@ -73,18 +73,17 @@ commands:
           paths:
             - node_modules
   create_env_file:
-    create_env_file:
-      steps:
-        - checkout
-        - run:
-            name: Create Env File
-            command: |
-              echo 'Creating .env file!'
-              touch .env
-              echo "API_URL=$API_URL">>.env
-        - persist_to_workspace:
-            paths: .
-            root: .
+    steps:
+      - checkout
+      - run:
+          name: Create Env File
+          command: |
+            echo 'Creating .env file!'
+            touch .env
+            echo "API_URL=$API_URL">>.env
+      - persist_to_workspace:
+          paths: .
+          root: .
 
 jobs:
   test:
