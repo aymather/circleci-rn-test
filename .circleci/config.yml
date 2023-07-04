@@ -93,14 +93,14 @@ jobs:
       - run:
         name: Run Tests
         command: yarn test
-      - run:
-        name: Install Fastlane
-        working_directory: fastlane
-        command: bundle install
-      - run:
-        name: Deploy with fastlane
-        working_directory: fastlane
-        command: bundle exec fastlane ios internal_beta
+      # - run:
+      #   name: Install Fastlane
+      #   working_directory: fastlane
+      #   command: bundle install
+      # - run:
+      #   name: Deploy with fastlane
+      #   working_directory: fastlane
+      #   command: bundle exec fastlane ios internal_beta
 
 workflows:
   test:
