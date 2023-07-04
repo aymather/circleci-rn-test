@@ -6,13 +6,13 @@
 #     macos:
 #         xcode: 14.3.1
 #     steps:
-#       - add_ssh_keys:
-#           fingerprints:
-#             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
-#       - run:
-#           name: Set Git to use SSH
-#           command: |
-#             git config --global url."ssh://git@github.com".insteadOf "https://github.com"
+      # - add_ssh_keys:
+      #     fingerprints:
+      #       - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
+      # - run:
+      #     name: Set Git to use SSH
+      #     command: |
+      #       git config --global url."ssh://git@github.com".insteadOf "https://github.com"
 #       - checkout
 #       - run:
 #           name: Install Dependencies
@@ -72,6 +72,13 @@ jobs:
           name: Install fastlane
           command: bundle install
           working_directory: fastlane
+      - add_ssh_keys:
+          fingerprints:
+            - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
+      - run:
+          name: Set Git to use SSH
+          command: |
+            git config --global url."ssh://git@github.com".insteadOf "https://github.com"
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane ios internal_beta
