@@ -89,7 +89,6 @@ jobs:
     steps:
       - checkout
       - rn/yarn_install
-      - rn/pod_install
       - run:
         name: Run Tests
         command: yarn test
