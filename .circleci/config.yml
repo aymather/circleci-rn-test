@@ -86,7 +86,6 @@ commands:
 jobs:
   test:
     executor: rn/linux_js
-      xcode_version: 14.3.1
     steps:
       - checkout
       - rn/yarn_install
