@@ -65,11 +65,11 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
-      # - rn/yarn_install
-      # - rn/pod_install
-      # - run:
-      #     name: Run Jest Tests
-      #     command: yarn test
+      - rn/yarn_install
+      - rn/pod_install
+      - run:
+          name: Run Jest Tests
+          command: yarn test
       - run:
           name: Install fastlane
           command: bundle install
