@@ -37,7 +37,7 @@ jobs:
           command: bundle install
           working_directory: fastlane
       - write-env-vars:
-          envtype: 'staging'
+          envtype: staging
           API_URL: API_URL_STAGING
           ENV: ENV_STAGING
       - add_ssh_keys:
