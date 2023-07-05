@@ -16,8 +16,8 @@ commands:
       - run:
           name: Write environment variables to .env.* file
           command: |
-            echo "<< parameters.API_URL >>=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
-            echo "<< parameters.ENV >>=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
+            echo "API_URL=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
+            echo "ENV=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
 jobs:
   test:
     executor:
@@ -43,6 +43,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
+      - run:
+          name: Check Git Status
+          command: git diff -p
       - run:
           name: Bump Build
           command: yarn bump-build
