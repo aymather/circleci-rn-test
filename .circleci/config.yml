@@ -45,7 +45,7 @@ jobs:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
       - run:
           name: Check Git Status
-          command: git diff -p
+          command: git --no-pager diff -p
       - run:
           name: Bump Build
           command: yarn bump-build
