@@ -1,61 +1,23 @@
-# version: 2.1
-# orbs:
-#   macos: circleci/macos@2.3.6
-# jobs:
-#   test:
-#     macos:
-#         xcode: 14.3.1
-#     steps:
-      # - add_ssh_keys:
-      #     fingerprints:
-      #       - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
-      # - run:
-      #     name: Set Git to use SSH
-      #     command: |
-      #       git config --global url."ssh://git@github.com".insteadOf "https://github.com"
-#       - checkout
-#       - run:
-#           name: Install Dependencies
-#           command: yarn install
-#       - run:
-#           name: Run Tests
-#           command: yarn test
-#       - run:
-#           name: Install CocoaPods
-#           command: |
-#             sudo gem install cocoapods
-#             pod install
-#           working_directory: ./ios
-#       - run:
-#           name: Install Apple WWDR Certificate
-#           command: |
-#             curl https://developer.apple.com/certificationauthority/AppleWWDRCA.cer --output AppleWWDRCA.cer
-#             security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" ~/Library/Keychains/login.keychain-db || true
-#             security import AppleWWDRCA.cer -k ~/Library/Keychains/login.keychain-db
-#       - run:
-#           name: Install Fastlane
-#           command: bundle install
-#           working_directory: fastlane
-#       - run:
-#           name: Deploy with fastlane
-#           command: bundle exec fastlane ios internal_beta
-#           working_directory: fastlane
-# workflows:
-#   version: 2
-#   jest-test:
-#     jobs:
-#       - test
-
-
-
-
-
 version: 2.1
 orbs:
   rn: react-native-community/react-native@7.1.1
 
 commands:
-
+  write-env-vars:
+    description: "Write environment variables to .env.* file"
+    parameters:
+      envtype:
+        type: string
+      API_URL:
+        type: env_var_name
+      ENV:
+        type: env_var_name
+    steps:
+      - run:
+        name: Write environment variables to .env.* file
+        command: |
+          echo "<< parameters.API_URL >>=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
+          echo "<< parameters.ENV >>=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
 jobs:
   test:
     executor:
@@ -74,9 +36,16 @@ jobs:
           name: Install fastlane
           command: bundle install
           working_directory: fastlane
+      - write-env-vars:
+          envtype: 'staging'
+          API_URL: API_URL_STAGING
+          ENV: ENV_STAGING
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
+      - run:
+          name: Bump Build
+          command: yarn bump-build
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane ios internal_beta
