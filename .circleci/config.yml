@@ -28,7 +28,6 @@ jobs:
     steps:
       - checkout
       - rn/yarn_install
-      - rn/pod_install
       - run:
           name: Run Jest Tests
           command: yarn test
@@ -41,6 +40,7 @@ jobs:
       - run:
           name: Install specific CocoaPods version
           command: bundle exec pod install
+          working_directory: ios
       - run:
           name: Install fastlane
           command: bundle install
