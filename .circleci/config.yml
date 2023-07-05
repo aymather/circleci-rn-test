@@ -14,10 +14,10 @@ commands:
         type: env_var_name
     steps:
       - run:
-        name: Write environment variables to .env.* file
-        command: |
-          echo "<< parameters.API_URL >>=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
-          echo "<< parameters.ENV >>=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
+          name: Write environment variables to .env.* file
+          command: |
+            echo "<< parameters.API_URL >>=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
+            echo "<< parameters.ENV >>=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
 jobs:
   test:
     executor:
