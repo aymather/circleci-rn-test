@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   rn: react-native-community/react-native@7.1.1
-
 commands:
   write-env-vars:
     description: "Write environment variables to .env.* file"
@@ -18,6 +17,16 @@ commands:
           command: |
             echo "API_URL=${<< parameters.API_URL >>}" >> .env.<< parameters.envtype >>
             echo "ENV=${<< parameters.ENV >>}" >> .env.<< parameters.envtype >>
+  write-android-signing-keys:
+    description: "Write Android signing keys to gradle.properties"
+    steps:
+      - run:
+          name: Write Android signing keys to gradle.properties
+          command: |
+            echo "MYAPP_UPLOAD_STORE_FILE=${MYAPP_UPLOAD_STORE_FILE}" >> ~/.gradle/gradle.properties
+            echo "MYAPP_UPLOAD_STORE_PASSWORD=${MYAPP_UPLOAD_STORE_PASSWORD}" >> ~/.gradle/gradle.properties
+            echo "MYAPP_UPLOAD_KEY_ALIAS=${MYAPP_UPLOAD_KEY_ALIAS}" >> ~/.gradle/gradle.properties
+            echo "MYAPP_UPLOAD_KEY_PASSWORD=${MYAPP_UPLOAD_KEY_PASSWORD}" >> ~/.gradle/gradle.properties
 jobs:
   test:
     executor:
@@ -49,22 +58,19 @@ jobs:
           envtype: staging
           API_URL: API_URL_STAGING
           ENV: ENV_STAGING
+      - write-android-signing-keys
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
-      - run:
-          name: Check Git Status
-          command: git --no-pager diff -p
       - run:
           name: Bump Build
           command: yarn bump-build
       - run:
           name: Deploy with fastlane
-          command: bundle exec fastlane ios internal_beta
+          command: bundle exec fastlane android internal_beta
           working_directory: fastlane
       - store_artifacts:
           path: output
-
 workflows:
   test:
     jobs:

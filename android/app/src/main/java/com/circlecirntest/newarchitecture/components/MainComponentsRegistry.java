@@ -1,4 +1,4 @@
-package com.example.circlecirntest.newarchitecture.components;
+package com.alec.circlecirntest.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

@@ -1,4 +1,4 @@
-package com.example.circlecirntest;
+package com.alec.circlecirntest;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

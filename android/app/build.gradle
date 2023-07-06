@@ -144,7 +144,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.circlecirntest"
+        applicationId "com.alec.circlecirntest"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 6
@@ -226,6 +226,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (project.hasProperty('CIRCLECI_RN_TEST_UPLOAD_STORE_FILE')) {
+                storeFile file(CIRCLECI_RN_TEST_UPLOAD_STORE_FILE)
+                storePassword CIRCLECI_RN_TEST_UPLOAD_STORE_PASSWORD
+                keyAlias CIRCLECI_RN_TEST_UPLOAD_KEY_ALIAS
+                keyPassword CIRCLECI_RN_TEST_UPLOAD_KEY_PASSWORD
+            }
+        }
     }
     buildTypes {
         debug {
@@ -245,21 +253,21 @@ android {
     productFlavors {
         prod {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circlecirntest"
+            applicationId "com.alec.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circlecirntest"
+            resValue "string", "build_config_package", "com.alec.circlecirntest"
         }
         staging {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circlecirntest"
+            applicationId "com.alec.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circlecirntest"
+            resValue "string", "build_config_package", "com.alec.circlecirntest"
         }
         dev {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.example.circlecirntest"
+            applicationId "com.alec.circlecirntest"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.example.circlecirntest"
+            resValue "string", "build_config_package", "com.alec.circlecirntest"
         }
     }
 
