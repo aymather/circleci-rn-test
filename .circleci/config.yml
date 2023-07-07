@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   rn: react-native-community/react-native@7.1.1
 commands:
-  write-env-vars:
+  write-app-env-vars:
     description: "Write environment variables to .env.* file"
     parameters:
       envtype:
@@ -23,10 +23,22 @@ commands:
       - run:
           name: Write Android signing keys to gradle.properties
           command: |
-            echo "MYAPP_UPLOAD_STORE_FILE=${MYAPP_UPLOAD_STORE_FILE}" >> ~/.gradle/gradle.properties
-            echo "MYAPP_UPLOAD_STORE_PASSWORD=${MYAPP_UPLOAD_STORE_PASSWORD}" >> ~/.gradle/gradle.properties
-            echo "MYAPP_UPLOAD_KEY_ALIAS=${MYAPP_UPLOAD_KEY_ALIAS}" >> ~/.gradle/gradle.properties
-            echo "MYAPP_UPLOAD_KEY_PASSWORD=${MYAPP_UPLOAD_KEY_PASSWORD}" >> ~/.gradle/gradle.properties
+            echo "CIRCLECI_RN_TEST_UPLOAD_STORE_FILE=${CIRCLECI_RN_TEST_UPLOAD_STORE_FILE}" >> ~/.gradle/gradle.properties
+            echo "CIRCLECI_RN_TEST_UPLOAD_STORE_PASSWORD=${CIRCLECI_RN_TEST_UPLOAD_STORE_PASSWORD}" >> ~/.gradle/gradle.properties
+            echo "CIRCLECI_RN_TEST_UPLOAD_KEY_ALIAS=${CIRCLECI_RN_TEST_UPLOAD_KEY_ALIAS}" >> ~/.gradle/gradle.properties
+            echo "CIRCLECI_RN_TEST_UPLOAD_KEY_PASSWORD=${CIRCLECI_RN_TEST_UPLOAD_KEY_PASSWORD}" >> ~/.gradle/gradle.properties
+  write-android-keystore:
+    description: "Write Android Keystore"
+    steps:
+      - run:
+          name: Write Android Keystore
+          command: echo $ANDROID_ENCRYPTED_KEYSTORE | base64 --decode > ./android/app/android.keystore
+  write-google-play-credentials:
+    description: "Decode Google Play Upload Key Credentials"
+    steps:
+      - run:
+          name: Decode Google Play Upload Key Credentials
+          command: echo $GOOGLE_PLAY_SERVICE_KEY | base64 --decode > /tmp/google-play-credentials.json
 jobs:
   test:
     executor:
@@ -54,11 +66,13 @@ jobs:
           name: Install fastlane
           command: bundle install
           working_directory: fastlane
-      - write-env-vars:
+      - write-app-env-vars:
           envtype: staging
           API_URL: API_URL_STAGING
           ENV: ENV_STAGING
       - write-android-signing-keys
+      - write-android-keystore
+      - write-google-play-credentials
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
