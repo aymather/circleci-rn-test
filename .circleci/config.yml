@@ -56,7 +56,7 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
-      # - rn/yarn_install
+      - rn/yarn_install
       # - run:
       #     name: Run Jest Tests
       #     command: yarn test
