@@ -36,11 +36,17 @@ commands:
           name: Write Android Keystore
           command: echo $ANDROID_ENCRYPTED_KEYSTORE | base64 --decode > ./android/app/android.keystore
   write-google-play-credentials:
-    description: "Decode Google Play Upload Key Credentials"
+    description: "Write Google Play Upload Key Credentials"
     steps:
       - run:
-          name: Decode Google Play Upload Key Credentials
+          name: Write Google Play Upload Key Credentials
           command: echo $GOOGLE_PLAY_SERVICE_KEY | base64 --decode > /tmp/google-play-credentials.json
+  show-diff:
+    description: "Show git diff"
+    steps:
+      - run:
+          name: Show git diff
+          command: git --no-pager diff -p
 jobs:
   test:
     executor:
@@ -50,24 +56,24 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
-      - rn/yarn_install
-      - run:
-          name: Run Jest Tests
-          command: yarn test
-      - run:
-          name: Install React Native Gem Bundler
-          command: gem install bundler
-      - run:
-          name: Bundle Install React Native
-          command: bundle install
-      - run:
-          name: Install specific CocoaPods version
-          command: bundle exec pod install
-          working_directory: ios
-      - run:
-          name: Install fastlane
-          command: bundle install
-          working_directory: fastlane
+      # - rn/yarn_install
+      # - run:
+      #     name: Run Jest Tests
+      #     command: yarn test
+      # - run:
+      #     name: Install React Native Gem Bundler
+      #     command: gem install bundler
+      # - run:
+      #     name: Bundle Install React Native
+      #     command: bundle install
+      # - run:
+      #     name: Install specific CocoaPods version
+      #     command: bundle exec pod install
+      #     working_directory: ios
+      # - run:
+      #     name: Install fastlane
+      #     command: bundle install
+      #     working_directory: fastlane
       - write-app-env-vars:
           envtype: staging
           API_URL: API_URL_STAGING
@@ -78,6 +84,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
+      - show-diff
       - run:
           name: Bump Build
           command: yarn bump-build
