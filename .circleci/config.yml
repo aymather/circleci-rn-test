@@ -23,6 +23,8 @@ commands:
       - run:
           name: Write Android signing keys to gradle.properties
           command: |
+            mkdir ~/.gradle
+            touch ~/.gradle/gradle.properties
             echo "CIRCLECI_RN_TEST_UPLOAD_STORE_FILE=${CIRCLECI_RN_TEST_UPLOAD_STORE_FILE}" >> ~/.gradle/gradle.properties
             echo "CIRCLECI_RN_TEST_UPLOAD_STORE_PASSWORD=${CIRCLECI_RN_TEST_UPLOAD_STORE_PASSWORD}" >> ~/.gradle/gradle.properties
             echo "CIRCLECI_RN_TEST_UPLOAD_KEY_ALIAS=${CIRCLECI_RN_TEST_UPLOAD_KEY_ALIAS}" >> ~/.gradle/gradle.properties
@@ -79,6 +81,9 @@ jobs:
       - run:
           name: Bump Build
           command: yarn bump-build
+      - run:
+          name: Push Build Commit
+          command: git push
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane android internal_beta
