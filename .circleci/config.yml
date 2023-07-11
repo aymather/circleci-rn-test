@@ -108,7 +108,6 @@ jobs:
       - checkout
       - rn/yarn_install
       - jest
-      - install-fastlane
       - write-app-env-vars:
           envtype: staging
           API_URL: API_URL_STAGING
@@ -126,6 +125,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - install-fastlane
       - write-android-signing-keys
       - write-android-keystore
       - write-google-play-credentials
@@ -144,7 +144,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - set-git-user-information
+      - install-fastlane
       - add-fingerprints
       - install-pods
       - run:
