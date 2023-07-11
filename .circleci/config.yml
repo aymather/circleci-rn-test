@@ -61,9 +61,14 @@ jobs:
       - image: cimg/android:2023.07-node
     environment:
       FL_OUTPUT_DIR: output
+      GEM_HOME: "${HOME}/.gem"
     steps:
       - checkout
       - set-git-user-information
+      - run: 
+          name: Set Ruby Path
+          command: |
+            echo 'export PATH="$HOME/.gem/bin:$PATH"' >> $BASH_ENV
       - rn/yarn_install
       - run:
           name: Run Jest Tests
