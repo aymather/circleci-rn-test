@@ -79,7 +79,9 @@ jobs:
             source /home/circleci/.rvm/scripts/rvm
             echo 'source /home/circleci/.rvm/scripts/rvm' >> $BASH_ENV
             rvm requirements
-            rvm install 3.0.6 --with-openssl-dir=/usr/lib/ssl
+            rvm remove 3.0.6
+            rvm pkg install openssl
+            rvm install 3.0.6 --with-openssl-dir=$HOME/.rvm/usr
             rvm use 3.0.6 --default
             ruby -v # To verify the installation
       - rn/yarn_install
