@@ -57,8 +57,8 @@ commands:
             git config --global user.email "noreply@circleci.com"
 jobs:
   test:
-    executor:
-      name: rn/linux_android
+    docker:
+      - image: cimg/android:2023.07-node
     environment:
       FL_OUTPUT_DIR: output
     steps:
