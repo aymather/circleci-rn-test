@@ -58,7 +58,7 @@ commands:
 jobs:
   test:
     executor:
-      name: rn/linux_js
+      name: rn/android
     environment:
       FL_OUTPUT_DIR: output
     steps:
