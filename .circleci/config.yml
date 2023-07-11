@@ -47,6 +47,14 @@ commands:
       - run:
           name: Show git diff
           command: git --no-pager diff -p
+  set-git-user-information:
+    description: "Set Git user information"
+    steps:
+      - run:
+          name: Set Git user information
+          command: |
+            git config --global user.name "CircleCI Server"
+            git config --global user.email "noreply@circleci.com"
 jobs:
   test:
     executor:
@@ -56,6 +64,7 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
+      - set-git-user-information
       - rn/yarn_install
       - run:
           name: Run Jest Tests
