@@ -69,6 +69,15 @@ jobs:
           name: Set Ruby Path
           command: |
             echo 'export PATH="$HOME/.gem/bin:$PATH"' >> $BASH_ENV
+      - run:
+          name: Install RVM and Ruby
+          command: |
+            curl -sSL https://get.rvm.io | bash -s stable
+            source /etc/profile.d/rvm.sh
+            rvm requirements
+            rvm install 3.0.6
+            rvm use 3.0.6 --default
+            ruby -v # To verify the installation
       - rn/yarn_install
       - run:
           name: Run Jest Tests
