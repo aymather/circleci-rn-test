@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   rn: react-native-community/react-native@7.1.1
+  android: circleci/android@2.1.2
 commands:
   write-app-env-vars:
     description: "Write environment variables to .env.* file"
@@ -57,8 +58,8 @@ commands:
             git config --global user.email "noreply@circleci.com"
 jobs:
   test:
-    executor:
-      name: rn/linux_android
+    docker:
+      - image: cimg/android:2022.07
     environment:
       FL_OUTPUT_DIR: output
     steps:
