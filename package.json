@@ -13,7 +13,7 @@
     "check-git-clean": "git diff-index --quiet HEAD -- || (echo \"You have uncommitted changes. Please commit or stash them.\"; exit 1)",
     "tag-version": "git tag v$(node -p -e \"require('./package.json').version + '(' + require('./package.json').build_number + ')'\")",
     "commit-version": "git add . && git commit -m \"Version: $(node -p -e \"require('./package.json').version\")($(node -p -e \"require('./package.json').build_number\"))\"",
-    "commit-version-and-skip-ci": "git add . && git commit -m \"Version: $(node -p -e \"require('./package.json').version\")($(node -p -e \"require('./package.json').build_number\"))\" [skip ci]\"",
+    "commit-version-and-skip-ci": "git add . && git commit -m \"Version: $(node -p -e \"require('./package.json').version\")($(node -p -e \"require('./package.json').build_number\")) [skip ci]\"\"",
     "bump-version-patch": "yarn check-git-clean && yarn increment-package-json-build-number && yarn version --patch --no-git-tag-version && npx react-native-version && yarn commit-version && yarn tag-version",
     "bump-version-minor": "yarn check-git-clean && yarn increment-package-json-build-number && yarn version --minor --no-git-tag-version && npx react-native-version && yarn commit-version && yarn tag-version",
     "bump-version-major": "yarn check-git-clean && yarn increment-package-json-build-number && yarn version --major --no-git-tag-version && npx react-native-version && yarn commit-version && yarn tag-version",
