@@ -79,6 +79,10 @@ jobs:
       #     command: bundle exec pod install
       #     working_directory: ios
       - run:
+          name: Bundle Config
+          command: bundle config set --local path 'vendor/bundle'
+          working_directory: fastlane
+      - run:
           name: Install fastlane
           command: bundle install --path vendor/bundle
           working_directory: fastlane
