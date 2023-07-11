@@ -61,10 +61,13 @@ jobs:
       name: rn/linux_android
     environment:
       FL_OUTPUT_DIR: output
+      ANDROID_HOME: /usr/local/android-sdk-linux
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
+      JAVA_HOME: "/usr/local/jdk-11.0.3"
     steps:
       - checkout
+      - run: echo 'sdk.dir = /usr/local/android-sdk-linux' > android/local.properties
       - set-git-user-information
       - rn/yarn_install
       - run:
