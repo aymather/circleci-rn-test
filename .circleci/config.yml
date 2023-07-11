@@ -58,7 +58,8 @@ commands:
 jobs:
   test:
     executor:
-      name: rn/android
+      name: rn/macos
+      xcode_version: 14.3.1
     environment:
       FL_OUTPUT_DIR: output
     steps:
@@ -68,16 +69,16 @@ jobs:
       - run:
           name: Run Jest Tests
           command: yarn test
-      - run:
-          name: Install React Native Gem Bundler
-          command: gem install bundler
-      - run:
-          name: Bundle Install React Native
-          command: bundle install
-      - run:
-          name: Install specific CocoaPods version
-          command: bundle exec pod install
-          working_directory: ios
+      # - run:
+      #     name: Install React Native Gem Bundler
+      #     command: gem install bundler
+      # - run:
+      #     name: Bundle Install React Native
+      #     command: bundle install
+      # - run:
+      #     name: Install specific CocoaPods version
+      #     command: bundle exec pod install
+      #     working_directory: ios
       - run:
           name: Install fastlane
           command: bundle install
