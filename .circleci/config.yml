@@ -57,9 +57,8 @@ commands:
             git config --global user.email "noreply@circleci.com"
 jobs:
   test:
-    executor:
-      name: rn/macos
-      xcode_version: 14.3.1
+    docker:
+      - image: cimg/android:2023.07-node
     environment:
       FL_OUTPUT_DIR: output
     steps:
@@ -69,16 +68,16 @@ jobs:
       - run:
           name: Run Jest Tests
           command: yarn test
-      - run:
-          name: Install React Native Gem Bundler
-          command: gem install bundler
-      - run:
-          name: Bundle Install React Native
-          command: bundle install
-      - run:
-          name: Install specific CocoaPods version
-          command: bundle exec pod install
-          working_directory: ios
+      # - run:
+      #     name: Install React Native Gem Bundler
+      #     command: gem install bundler
+      # - run:
+      #     name: Bundle Install React Native
+      #     command: rvm use 3.0.6 do bundle install
+      # - run:
+      #     name: Install specific CocoaPods version
+      #     command: bundle exec pod install
+      #     working_directory: ios
       - run:
           name: Install fastlane
           command: bundle install
