@@ -57,23 +57,23 @@ jobs:
     steps:
       - checkout
       - rn/yarn_install
-      # - run:
-      #     name: Run Jest Tests
-      #     command: yarn test
-      # - run:
-      #     name: Install React Native Gem Bundler
-      #     command: gem install bundler
-      # - run:
-      #     name: Bundle Install React Native
-      #     command: bundle install
-      # - run:
-      #     name: Install specific CocoaPods version
-      #     command: bundle exec pod install
-      #     working_directory: ios
-      # - run:
-      #     name: Install fastlane
-      #     command: bundle install
-      #     working_directory: fastlane
+      - run:
+          name: Run Jest Tests
+          command: yarn test
+      - run:
+          name: Install React Native Gem Bundler
+          command: gem install bundler
+      - run:
+          name: Bundle Install React Native
+          command: bundle install
+      - run:
+          name: Install specific CocoaPods version
+          command: bundle exec pod install
+          working_directory: ios
+      - run:
+          name: Install fastlane
+          command: bundle install
+          working_directory: fastlane
       - write-app-env-vars:
           envtype: staging
           API_URL: API_URL_STAGING
