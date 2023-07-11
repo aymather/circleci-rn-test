@@ -61,28 +61,23 @@ jobs:
       name: rn/linux_android
     environment:
       FL_OUTPUT_DIR: output
-      ANDROID_HOME: /usr/local/android-sdk-linux
-      LC_ALL: en_US.UTF-8
-      LANG: en_US.UTF-8
-      JAVA_HOME: "/usr/local/jdk-11.0.3"
     steps:
       - checkout
-      - run: echo 'sdk.dir = /usr/local/android-sdk-linux' > android/local.properties
       - set-git-user-information
       - rn/yarn_install
       - run:
           name: Run Jest Tests
           command: yarn test
-      # - run:
-      #     name: Install React Native Gem Bundler
-      #     command: gem install bundler
-      # - run:
-      #     name: Bundle Install React Native
-      #     command: bundle install
-      # - run:
-      #     name: Install specific CocoaPods version
-      #     command: bundle exec pod install
-      #     working_directory: ios
+      - run:
+          name: Install React Native Gem Bundler
+          command: gem install bundler
+      - run:
+          name: Bundle Install React Native
+          command: bundle install
+      - run:
+          name: Install specific CocoaPods version
+          command: bundle exec pod install
+          working_directory: ios
       - run:
           name: Install fastlane
           command: bundle install
