@@ -87,7 +87,7 @@ jobs:
       - show-diff
       - run:
           name: Bump Build
-          command: yarn bump-build
+          command: yarn bump-build-and-skip-ci
       - run:
           name: Push Build Commit
           command: git push
