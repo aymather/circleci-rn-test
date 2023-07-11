@@ -55,29 +55,15 @@ commands:
           command: |
             git config --global user.name "CircleCI Server"
             git config --global user.email "noreply@circleci.com"
-jobs:
-  test:
-    docker:
-      - image: cimg/android:2023.07-node
-    environment:
-      FL_OUTPUT_DIR: output
+  jest:
+    description: "Run Jest Tests"
     steps:
-      - checkout
-      - set-git-user-information
-      - rn/yarn_install
       - run:
           name: Run Jest Tests
           command: yarn test
-      # - run:
-      #     name: Install React Native Gem Bundler
-      #     command: gem install bundler
-      # - run:
-      #     name: Bundle Install React Native
-      #     command: bundle install
-      # - run:
-      #     name: Install specific CocoaPods version
-      #     command: bundle exec pod install
-      #     working_directory: ios
+  install-fastlane:
+    description: "Install Fastlane"
+    steps:
       - run:
           name: Bundle Config
           command: bundle config set --local path 'vendor/bundle'
@@ -86,30 +72,94 @@ jobs:
           name: Install fastlane
           command: bundle install
           working_directory: fastlane
-      - write-app-env-vars:
-          envtype: staging
-          API_URL: API_URL_STAGING
-          ENV: ENV_STAGING
-      - write-android-signing-keys
-      - write-android-keystore
-      - write-google-play-credentials
+  add-fingerprints:
+    description: "Add fingerprints to known_hosts"
+    steps:
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
-      - show-diff
+  bump-build-number:
+    description: "Bump Build Number"
+    steps:
       - run:
           name: Bump Build
           command: yarn bump-build-and-skip-ci
       - run:
           name: Push Build Commit
           command: git push
+  install-pods:
+    description: "Install Pods"
+    steps:
+      - run:
+          name: Install React Native Gem Bundler
+          command: gem install bundler
+      - run:
+          name: Bundle Install React Native
+          command: bundle install
+      - run:
+          name: Install specific CocoaPods version
+          command: bundle exec pod install
+          working_directory: ios
+jobs:
+  staging_env_setup:
+    docker:
+      - image: cimg/node:16.8.0
+    steps:
+      - checkout
+      - rn/yarn_install
+      - jest
+      - install-fastlane
+      - write-app-env-vars:
+          envtype: staging
+          API_URL: API_URL_STAGING
+          ENV: ENV_STAGING
+      - set-git-user-information
+      - bump-build-number
+      - persist_to_workspace:
+          root: .
+          paths: .
+  build_android_staging:
+    docker:
+      - image: cimg/android:2023.07-node
+    environment:
+      FL_OUTPUT_DIR: output
+    steps:
+      - attach_workspace:
+          at: .
+      - write-android-signing-keys
+      - write-android-keystore
+      - write-google-play-credentials
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane android internal_beta
           working_directory: fastlane
       - store_artifacts:
           path: output
+  build_ios_staging:
+    executor:
+      name: rn/macos
+      xcode_version: 14.3.1
+    environment:
+      FL_OUTPUT_DIR: output
+    steps:
+      - attach_workspace:
+          at: .
+      - set-git-user-information
+      - add-fingerprints
+      - install-pods
+      - run:
+          name: Deploy with fastlane
+          command: bundle exec fastlane ios internal_beta
+          working_directory: fastlane
+      - store_artifacts:
+          path: output
 workflows:
-  test:
+  deploy_staging:
     jobs:
-      - test
+      - staging_env_setup
+      - build_android_staging:
+          requires:
+            - staging_env_setup
+      - build_ios_staging:
+          requires:
+            - staging_env_setup
