@@ -74,7 +74,7 @@ jobs:
           command: gem install bundler
       - run:
           name: Bundle Install React Native
-          command: rvm use 3.0.6 do bundle install
+          command: bundle install
       - run:
           name: Install specific CocoaPods version
           command: bundle exec pod install
