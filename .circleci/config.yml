@@ -93,7 +93,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "eb:e1:59:78:03:cc:f6:6a:e4:bf:d4:63:13:f7:e5:78"
-      - show-diff
       - run:
           name: Bump Build
           command: yarn bump-build-and-skip-ci
