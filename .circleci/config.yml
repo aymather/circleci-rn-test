@@ -59,10 +59,10 @@ jobs:
   test:
     executor:
       name: rn/linux_android
-      gradle_options: "-Xmx4608m -XX:+UnlockExperimentalVMOptions -XX:+UseContainerSupport -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
-      java_options: "-Xmx4608m -XX:+UnlockExperimentalVMOptions -XX:+UseContainerSupport -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
     environment:
       FL_OUTPUT_DIR: output
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
     steps:
       - checkout
       - set-git-user-information
