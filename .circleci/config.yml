@@ -77,7 +77,7 @@ commands:
     steps:
       - run:
           name: Bump Build
-          command: yarn bump-build-and-skip-ci
+          command: yarn bump-build
       - run:
           name: Push Build Commit
           command: git push
