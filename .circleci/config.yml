@@ -114,8 +114,6 @@ jobs:
           envtype: staging
           API_URL: API_URL_STAGING
           ENV: ENV_STAGING
-      - set-git-user-information
-      - bump-build-number
       - persist_to_workspace:
           root: .
           paths: .
@@ -126,6 +124,14 @@ jobs:
       - attach_workspace:
           at: .
       - jest
+  bump_build_number:
+    docker:
+      - image: cimg/node:16.14.2
+    steps:
+      - attach_workspace:
+          at: .
+      - set-git-user-information
+      - bump-build-number
   build_android_staging:
     docker:
       - image: cimg/android:2023.07-node
@@ -167,6 +173,14 @@ workflows:
       - tests:
           requires:
             - env_setup
+      - bump_build_number:
+          filters:
+            branches:
+              only:
+                - testflight
+                - master
+          requires:
+            - tests
       - build_android_staging:
           filters:
             branches:
