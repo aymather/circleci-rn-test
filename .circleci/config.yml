@@ -103,14 +103,13 @@ commands:
             - ios/Pods
           key: pod-deps-{{ checksum "ios/Podfile.lock" }}
 jobs:
-  staging_env_setup:
+  env_setup:
     docker:
       - image: cimg/node:16.14.2
     steps:
       - checkout
       - add-fingerprints
       - rn/yarn_install
-      - jest
       - write-app-env-vars:
           envtype: staging
           API_URL: API_URL_STAGING
@@ -120,6 +119,13 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: .
+  tests:
+    docker:
+      - image: cimg/node:16.14.2
+    steps:
+      - attach_workspace:
+          at: .
+      - jest
   build_android_staging:
     docker:
       - image: cimg/android:2023.07-node
@@ -129,9 +135,7 @@ jobs:
       - attach_workspace:
           at: .
       - install-fastlane
-      - write-android-signing-keys
-      - write-android-keystore
-      - write-google-play-credentials
+      - write-android-credentials
       - run:
           name: Deploy with fastlane
           command: bundle exec fastlane android internal_beta
@@ -159,10 +163,19 @@ jobs:
 workflows:
   deploy_staging:
     jobs:
-      - staging_env_setup
+      - env_setup
+      - tests:
+          requires:
+            - env_setup
       - build_android_staging:
+          filters:
+            branches:
+              only: testflight
           requires:
-            - staging_env_setup
+            - env_setup
       - build_ios_staging:
+          filters:
+            branches:
+              only: testflight
           requires:
-            - staging_env_setup
+            - env_setup
